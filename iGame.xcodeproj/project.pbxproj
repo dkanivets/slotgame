@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C752155C2B7FFD000085FF21 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C752155B2B7FFD000085FF21 /* Launch Screen.storyboard */; };
+		C752157E2B7FFEE70085FF21 /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215632B7FFEE70085FF21 /* Inter-Medium.ttf */; };
+		C752157F2B7FFEE70085FF21 /* KohSantepheap-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215642B7FFEE70085FF21 /* KohSantepheap-Light.ttf */; };
+		C75215802B7FFEE70085FF21 /* OpenSansHebrew-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215652B7FFEE70085FF21 /* OpenSansHebrew-ExtraBoldItalic.ttf */; };
+		C75215812B7FFEE70085FF21 /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215662B7FFEE70085FF21 /* Inter-Light.ttf */; };
+		C75215822B7FFEE70085FF21 /* OpenSansHebrew-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215672B7FFEE70085FF21 /* OpenSansHebrew-BoldItalic.ttf */; };
+		C75215832B7FFEE70085FF21 /* OpenSansHebrew-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215682B7FFEE70085FF21 /* OpenSansHebrew-Regular.ttf */; };
+		C75215842B7FFEE70085FF21 /* OpenSansHebrew-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215692B7FFEE70085FF21 /* OpenSansHebrew-ExtraBold.ttf */; };
+		C75215852B7FFEE70085FF21 /* Inter-VariableFont_slnt,wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752156A2B7FFEE70085FF21 /* Inter-VariableFont_slnt,wght.ttf */; };
+		C75215862B7FFEE70085FF21 /* Suranna-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752156B2B7FFEE70085FF21 /* Suranna-Regular.ttf */; };
+		C75215872B7FFEE70085FF21 /* KohSantepheap-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752156C2B7FFEE70085FF21 /* KohSantepheap-Bold.ttf */; };
+		C75215882B7FFEE70085FF21 /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752156D2B7FFEE70085FF21 /* Inter-Thin.ttf */; };
+		C75215892B7FFEE70085FF21 /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752156E2B7FFEE70085FF21 /* Inter-Bold.ttf */; };
+		C752158A2B7FFEE70085FF21 /* KohSantepheap-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752156F2B7FFEE70085FF21 /* KohSantepheap-Thin.ttf */; };
+		C752158B2B7FFEE70085FF21 /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215702B7FFEE70085FF21 /* Inter-Regular.ttf */; };
+		C752158C2B7FFEE70085FF21 /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215712B7FFEE70085FF21 /* Inter-ExtraBold.ttf */; };
+		C752158D2B7FFEE70085FF21 /* OpenSansHebrew-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215722B7FFEE70085FF21 /* OpenSansHebrew-Light.ttf */; };
+		C752158E2B7FFEE70085FF21 /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215732B7FFEE70085FF21 /* Inter-ExtraLight.ttf */; };
+		C752158F2B7FFEE70085FF21 /* Judson-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215742B7FFEE70085FF21 /* Judson-Bold.ttf */; };
+		C75215902B7FFEE70085FF21 /* OpenSansHebrew-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215752B7FFEE70085FF21 /* OpenSansHebrew-LightItalic.ttf */; };
+		C75215912B7FFEE70085FF21 /* Judson-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215762B7FFEE70085FF21 /* Judson-Regular.ttf */; };
+		C75215922B7FFEE70085FF21 /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215772B7FFEE70085FF21 /* Inter-Black.ttf */; };
+		C75215932B7FFEE70085FF21 /* KohSantepheap-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215782B7FFEE70085FF21 /* KohSantepheap-Regular.ttf */; };
+		C75215942B7FFEE70085FF21 /* OpenSansHebrew-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C75215792B7FFEE70085FF21 /* OpenSansHebrew-Bold.ttf */; };
+		C75215952B7FFEE70085FF21 /* Judson-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752157A2B7FFEE70085FF21 /* Judson-Italic.ttf */; };
+		C75215962B7FFEE70085FF21 /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752157B2B7FFEE70085FF21 /* Inter-SemiBold.ttf */; };
+		C75215972B7FFEE70085FF21 /* OpenSansHebrew-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752157C2B7FFEE70085FF21 /* OpenSansHebrew-Italic.ttf */; };
+		C75215982B7FFEE70085FF21 /* KohSantepheap-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C752157D2B7FFEE70085FF21 /* KohSantepheap-Black.ttf */; };
+		C752159B2B8009DB0085FF21 /* SlotsGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C752159A2B8009DB0085FF21 /* SlotsGame.swift */; };
+		C752159D2B800A4A0085FF21 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C752159C2B800A4A0085FF21 /* SettingsView.swift */; };
+		C752159F2B8149F90085FF21 /* RouletteGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = C752159E2B8149F90085FF21 /* RouletteGame.swift */; };
+		C75C240C2B7E96DE000A8123 /* iGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C240B2B7E96DE000A8123 /* iGameApp.swift */; };
+		C75C240E2B7E96DE000A8123 /* SelectGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75C240D2B7E96DE000A8123 /* SelectGameView.swift */; };
+		C75C24102B7E96E0000A8123 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75C240F2B7E96E0000A8123 /* Assets.xcassets */; };
+		C75C24132B7E96E0000A8123 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C75C24122B7E96E0000A8123 /* Preview Assets.xcassets */; };
+		C789C8842B852D34002ABD89 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C789C8832B852D34002ABD89 /* BottomView.swift */; };
+		C789C8872B85F56C002ABD89 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C789C8862B85F56C002ABD89 /* Localizable.xcstrings */; };
+		C789C8892B85FD8D002ABD89 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C789C8882B85FD8D002ABD89 /* AudioManager.swift */; };
+		C789C88D2B860140002ABD89 /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C789C88C2B860140002ABD89 /* theme.mp3 */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C752155B2B7FFD000085FF21 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		C75215632B7FFEE70085FF21 /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		C75215642B7FFEE70085FF21 /* KohSantepheap-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KohSantepheap-Light.ttf"; sourceTree = "<group>"; };
+		C75215652B7FFEE70085FF21 /* OpenSansHebrew-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		C75215662B7FFEE70085FF21 /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		C75215672B7FFEE70085FF21 /* OpenSansHebrew-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C75215682B7FFEE70085FF21 /* OpenSansHebrew-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-Regular.ttf"; sourceTree = "<group>"; };
+		C75215692B7FFEE70085FF21 /* OpenSansHebrew-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C752156A2B7FFEE70085FF21 /* Inter-VariableFont_slnt,wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-VariableFont_slnt,wght.ttf"; sourceTree = "<group>"; };
+		C752156B2B7FFEE70085FF21 /* Suranna-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Suranna-Regular.ttf"; sourceTree = "<group>"; };
+		C752156C2B7FFEE70085FF21 /* KohSantepheap-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KohSantepheap-Bold.ttf"; sourceTree = "<group>"; };
+		C752156D2B7FFEE70085FF21 /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		C752156E2B7FFEE70085FF21 /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		C752156F2B7FFEE70085FF21 /* KohSantepheap-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KohSantepheap-Thin.ttf"; sourceTree = "<group>"; };
+		C75215702B7FFEE70085FF21 /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		C75215712B7FFEE70085FF21 /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		C75215722B7FFEE70085FF21 /* OpenSansHebrew-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-Light.ttf"; sourceTree = "<group>"; };
+		C75215732B7FFEE70085FF21 /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		C75215742B7FFEE70085FF21 /* Judson-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Judson-Bold.ttf"; sourceTree = "<group>"; };
+		C75215752B7FFEE70085FF21 /* OpenSansHebrew-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-LightItalic.ttf"; sourceTree = "<group>"; };
+		C75215762B7FFEE70085FF21 /* Judson-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Judson-Regular.ttf"; sourceTree = "<group>"; };
+		C75215772B7FFEE70085FF21 /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		C75215782B7FFEE70085FF21 /* KohSantepheap-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KohSantepheap-Regular.ttf"; sourceTree = "<group>"; };
+		C75215792B7FFEE70085FF21 /* OpenSansHebrew-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-Bold.ttf"; sourceTree = "<group>"; };
+		C752157A2B7FFEE70085FF21 /* Judson-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Judson-Italic.ttf"; sourceTree = "<group>"; };
+		C752157B2B7FFEE70085FF21 /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
+		C752157C2B7FFEE70085FF21 /* OpenSansHebrew-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSansHebrew-Italic.ttf"; sourceTree = "<group>"; };
+		C752157D2B7FFEE70085FF21 /* KohSantepheap-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KohSantepheap-Black.ttf"; sourceTree = "<group>"; };
+		C75215992B7FFF0B0085FF21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C752159A2B8009DB0085FF21 /* SlotsGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlotsGame.swift; sourceTree = "<group>"; };
+		C752159C2B800A4A0085FF21 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		C752159E2B8149F90085FF21 /* RouletteGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteGame.swift; sourceTree = "<group>"; };
+		C75C24082B7E96DE000A8123 /* iGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C75C240B2B7E96DE000A8123 /* iGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iGameApp.swift; sourceTree = "<group>"; };
+		C75C240D2B7E96DE000A8123 /* SelectGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectGameView.swift; sourceTree = "<group>"; };
+		C75C240F2B7E96E0000A8123 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C75C24122B7E96E0000A8123 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C789C8832B852D34002ABD89 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		C789C8862B85F56C002ABD89 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		C789C8882B85FD8D002ABD89 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		C789C88C2B860140002ABD89 /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C75C24052B7E96DE000A8123 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C75215622B7FFEE70085FF21 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C75215632B7FFEE70085FF21 /* Inter-Medium.ttf */,
+				C75215642B7FFEE70085FF21 /* KohSantepheap-Light.ttf */,
+				C75215652B7FFEE70085FF21 /* OpenSansHebrew-ExtraBoldItalic.ttf */,
+				C75215662B7FFEE70085FF21 /* Inter-Light.ttf */,
+				C75215672B7FFEE70085FF21 /* OpenSansHebrew-BoldItalic.ttf */,
+				C75215682B7FFEE70085FF21 /* OpenSansHebrew-Regular.ttf */,
+				C75215692B7FFEE70085FF21 /* OpenSansHebrew-ExtraBold.ttf */,
+				C752156A2B7FFEE70085FF21 /* Inter-VariableFont_slnt,wght.ttf */,
+				C752156B2B7FFEE70085FF21 /* Suranna-Regular.ttf */,
+				C752156C2B7FFEE70085FF21 /* KohSantepheap-Bold.ttf */,
+				C752156D2B7FFEE70085FF21 /* Inter-Thin.ttf */,
+				C752156E2B7FFEE70085FF21 /* Inter-Bold.ttf */,
+				C752156F2B7FFEE70085FF21 /* KohSantepheap-Thin.ttf */,
+				C75215702B7FFEE70085FF21 /* Inter-Regular.ttf */,
+				C75215712B7FFEE70085FF21 /* Inter-ExtraBold.ttf */,
+				C75215722B7FFEE70085FF21 /* OpenSansHebrew-Light.ttf */,
+				C75215732B7FFEE70085FF21 /* Inter-ExtraLight.ttf */,
+				C75215742B7FFEE70085FF21 /* Judson-Bold.ttf */,
+				C75215752B7FFEE70085FF21 /* OpenSansHebrew-LightItalic.ttf */,
+				C75215762B7FFEE70085FF21 /* Judson-Regular.ttf */,
+				C75215772B7FFEE70085FF21 /* Inter-Black.ttf */,
+				C75215782B7FFEE70085FF21 /* KohSantepheap-Regular.ttf */,
+				C75215792B7FFEE70085FF21 /* OpenSansHebrew-Bold.ttf */,
+				C752157A2B7FFEE70085FF21 /* Judson-Italic.ttf */,
+				C752157B2B7FFEE70085FF21 /* Inter-SemiBold.ttf */,
+				C752157C2B7FFEE70085FF21 /* OpenSansHebrew-Italic.ttf */,
+				C752157D2B7FFEE70085FF21 /* KohSantepheap-Black.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C75C23FF2B7E96DE000A8123 = {
+			isa = PBXGroup;
+			children = (
+				C789C8862B85F56C002ABD89 /* Localizable.xcstrings */,
+				C75C240A2B7E96DE000A8123 /* iGame */,
+				C75C24092B7E96DE000A8123 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C75C24092B7E96DE000A8123 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C75C24082B7E96DE000A8123 /* iGame.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C75C240A2B7E96DE000A8123 /* iGame */ = {
+			isa = PBXGroup;
+			children = (
+				C75215992B7FFF0B0085FF21 /* Info.plist */,
+				C752155B2B7FFD000085FF21 /* Launch Screen.storyboard */,
+				C75C240B2B7E96DE000A8123 /* iGameApp.swift */,
+				C7CAAA242B861FB500353F15 /* UI */,
+				C7CAAA232B861F9E00353F15 /* Managers */,
+				C7CAAA222B861F9500353F15 /* Resources */,
+				C75215622B7FFEE70085FF21 /* Fonts */,
+				C75C24112B7E96E0000A8123 /* Preview Content */,
+			);
+			path = iGame;
+			sourceTree = "<group>";
+		};
+		C75C24112B7E96E0000A8123 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C75C24122B7E96E0000A8123 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C789C8852B852D39002ABD89 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C789C8832B852D34002ABD89 /* BottomView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C7CAAA222B861F9500353F15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C789C88C2B860140002ABD89 /* theme.mp3 */,
+				C75C240F2B7E96E0000A8123 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C7CAAA232B861F9E00353F15 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C789C8882B85FD8D002ABD89 /* AudioManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C7CAAA242B861FB500353F15 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C789C8852B852D39002ABD89 /* Components */,
+				C75C240D2B7E96DE000A8123 /* SelectGameView.swift */,
+				C752159A2B8009DB0085FF21 /* SlotsGame.swift */,
+				C752159E2B8149F90085FF21 /* RouletteGame.swift */,
+				C752159C2B800A4A0085FF21 /* SettingsView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C75C24072B7E96DE000A8123 /* iGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C75C24162B7E96E0000A8123 /* Build configuration list for PBXNativeTarget "iGame" */;
+			buildPhases = (
+				C75C24042B7E96DE000A8123 /* Sources */,
+				C75C24052B7E96DE000A8123 /* Frameworks */,
+				C75C24062B7E96DE000A8123 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iGame;
+			productName = iGame;
+			productReference = C75C24082B7E96DE000A8123 /* iGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C75C24002B7E96DE000A8123 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					C75C24072B7E96DE000A8123 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = C75C24032B7E96DE000A8123 /* Build configuration list for PBXProject "iGame" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C75C23FF2B7E96DE000A8123;
+			productRefGroup = C75C24092B7E96DE000A8123 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C75C24072B7E96DE000A8123 /* iGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C75C24062B7E96DE000A8123 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C75215802B7FFEE70085FF21 /* OpenSansHebrew-ExtraBoldItalic.ttf in Resources */,
+				C75215822B7FFEE70085FF21 /* OpenSansHebrew-BoldItalic.ttf in Resources */,
+				C75215842B7FFEE70085FF21 /* OpenSansHebrew-ExtraBold.ttf in Resources */,
+				C752157E2B7FFEE70085FF21 /* Inter-Medium.ttf in Resources */,
+				C75215982B7FFEE70085FF21 /* KohSantepheap-Black.ttf in Resources */,
+				C752155C2B7FFD000085FF21 /* Launch Screen.storyboard in Resources */,
+				C789C8872B85F56C002ABD89 /* Localizable.xcstrings in Resources */,
+				C75215872B7FFEE70085FF21 /* KohSantepheap-Bold.ttf in Resources */,
+				C75215912B7FFEE70085FF21 /* Judson-Regular.ttf in Resources */,
+				C75215972B7FFEE70085FF21 /* OpenSansHebrew-Italic.ttf in Resources */,
+				C75215922B7FFEE70085FF21 /* Inter-Black.ttf in Resources */,
+				C75215932B7FFEE70085FF21 /* KohSantepheap-Regular.ttf in Resources */,
+				C75215892B7FFEE70085FF21 /* Inter-Bold.ttf in Resources */,
+				C75215882B7FFEE70085FF21 /* Inter-Thin.ttf in Resources */,
+				C75215942B7FFEE70085FF21 /* OpenSansHebrew-Bold.ttf in Resources */,
+				C75215952B7FFEE70085FF21 /* Judson-Italic.ttf in Resources */,
+				C752158F2B7FFEE70085FF21 /* Judson-Bold.ttf in Resources */,
+				C75215902B7FFEE70085FF21 /* OpenSansHebrew-LightItalic.ttf in Resources */,
+				C75215852B7FFEE70085FF21 /* Inter-VariableFont_slnt,wght.ttf in Resources */,
+				C75215862B7FFEE70085FF21 /* Suranna-Regular.ttf in Resources */,
+				C75C24132B7E96E0000A8123 /* Preview Assets.xcassets in Resources */,
+				C752158E2B7FFEE70085FF21 /* Inter-ExtraLight.ttf in Resources */,
+				C752158C2B7FFEE70085FF21 /* Inter-ExtraBold.ttf in Resources */,
+				C75215962B7FFEE70085FF21 /* Inter-SemiBold.ttf in Resources */,
+				C75215832B7FFEE70085FF21 /* OpenSansHebrew-Regular.ttf in Resources */,
+				C752158D2B7FFEE70085FF21 /* OpenSansHebrew-Light.ttf in Resources */,
+				C789C88D2B860140002ABD89 /* theme.mp3 in Resources */,
+				C75C24102B7E96E0000A8123 /* Assets.xcassets in Resources */,
+				C752158A2B7FFEE70085FF21 /* KohSantepheap-Thin.ttf in Resources */,
+				C752157F2B7FFEE70085FF21 /* KohSantepheap-Light.ttf in Resources */,
+				C752158B2B7FFEE70085FF21 /* Inter-Regular.ttf in Resources */,
+				C75215812B7FFEE70085FF21 /* Inter-Light.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C75C24042B7E96DE000A8123 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C752159B2B8009DB0085FF21 /* SlotsGame.swift in Sources */,
+				C789C8892B85FD8D002ABD89 /* AudioManager.swift in Sources */,
+				C752159D2B800A4A0085FF21 /* SettingsView.swift in Sources */,
+				C75C240E2B7E96DE000A8123 /* SelectGameView.swift in Sources */,
+				C789C8842B852D34002ABD89 /* BottomView.swift in Sources */,
+				C75C240C2B7E96DE000A8123 /* iGameApp.swift in Sources */,
+				C752159F2B8149F90085FF21 /* RouletteGame.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C75C24142B7E96E0000A8123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C75C24152B7E96E0000A8123 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C75C24172B7E96E0000A8123 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iGame/Preview Content\"";
+				DEVELOPMENT_TEAM = KWNCHNHPA6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iGame/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iGame.test.iGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C75C24182B7E96E0000A8123 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"iGame/Preview Content\"";
+				DEVELOPMENT_TEAM = KWNCHNHPA6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iGame/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iGame.test.iGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C75C24032B7E96DE000A8123 /* Build configuration list for PBXProject "iGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C75C24142B7E96E0000A8123 /* Debug */,
+				C75C24152B7E96E0000A8123 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C75C24162B7E96E0000A8123 /* Build configuration list for PBXNativeTarget "iGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C75C24172B7E96E0000A8123 /* Debug */,
+				C75C24182B7E96E0000A8123 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C75C24002B7E96DE000A8123 /* Project object */;
+}

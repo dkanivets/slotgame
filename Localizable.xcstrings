@@ -1,0 +1,49 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld" : {
+
+    },
+    "bottomView.totalBet.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "TOTAL BET"
+          }
+        }
+      }
+    },
+    "bottomView.win.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WIN"
+          }
+        }
+      }
+    },
+    "selectGame.roulette.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Roulette"
+          }
+        }
+      }
+    },
+    "selectGame.slots.title" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slots"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
