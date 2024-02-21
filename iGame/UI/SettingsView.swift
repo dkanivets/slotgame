@@ -31,7 +31,9 @@ struct SettingsView: View {
         .ignoresSafeArea(.all)
         .navigationBarHidden(true)
         .onAppear(perform: {
-            soundOn = audioManager.isPlaying
+            if audioManager != nil {
+                soundOn = audioManager.isPlaying
+            }
         })
     }
     private var settingsButtons: some View {
