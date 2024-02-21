@@ -9,6 +9,8 @@ import SwiftUI
 
 struct SelectGameView: View {
     private var font = Font.custom("Suranna", size: 28)
+    private var opacity: CGFloat = 0.69
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: .topTrailing) {
@@ -27,12 +29,10 @@ struct SelectGameView: View {
     }
     
     private var settingsView: some View {
-        NavigationLink(destination: {
-            SettingsView()
-        }, label: {
+        NavigationLink(destination: SettingsView()) {
             Image("ic_settings")
-        })
-        .padding(32)
+                .padding(32)
+        }
     }
     
     private var gamesView: some View {
@@ -51,21 +51,19 @@ struct SelectGameView: View {
         VStack(spacing: 16) {
             VStack (spacing: 0){
                 Image(image)
-                    .background(.green)
+                    .background(Color.green)
                 Text(title)
                     .font(font)
                     .foregroundColor(.white)
             }
             .background(
                 Color.black
-                    .opacity(0.69)
+                    .opacity(opacity)
             )
             .cornerRadius(12)
-            NavigationLink(destination: {
-                destination
-            }, label: {
+            NavigationLink(destination: destination) {
                 Image("ic_play")
-            })
+            }
         }
     }
 }

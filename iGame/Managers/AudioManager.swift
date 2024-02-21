@@ -32,13 +32,11 @@ final class AudioManager: ObservableObject {
             audioPlayer.play()
         }
     }
-    
     func stop() {
         if audioPlayer.isPlaying {
             audioPlayer.stop()
         }
     }
-    
     func subscribe() {
         $isPlaying.sink { [weak self] isPlaying in
             if isPlaying {

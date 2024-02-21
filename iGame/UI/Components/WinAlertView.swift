@@ -8,37 +8,49 @@
 import SwiftUI
 
 struct WinAlertView: View {
+    @Binding var showModal: Bool
+    
     private let blueColor = Color("blueColor")
     private let fontOpenSansHebrew22 = Font.custom("OpenSansHebrew-Bold", size: 22)
     private let fontOpenSansHebrew26 = Font.custom("OpenSansHebrew-Bold", size: 26)
-    @Binding var showModal: Bool
+    private let textOpacity: CGFloat = 0.85
     
     var body: some View {
         VStack(spacing: 12) {
-            Text("You Win!")
-                .foregroundColor(.white)
-                .font(fontOpenSansHebrew22)
-            Text("Congratulations!")
-                .font(fontOpenSansHebrew26)
-                .foregroundColor(.white)
-                .padding(.vertical, 12)
+            winText
+            congratsText
             Image("ic_coins")
-            Button(action: {
-                showModal = false
-            }, label: {
-                Image("ic_play_more")
-            })
+            playMoreButton
         }
-        .padding(.vertical, 24)
-        .padding(.horizontal, 48)
-        .background(blueColor.opacity(0.85))
-        .clipped()
-        .cornerRadius(16)
+        .padding(24)
+        .background(blueColor.opacity(textOpacity))
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         .overlay(
             RoundedRectangle(cornerRadius: 16)
-                .stroke(.white, lineWidth: 2)
+                .stroke(Color.white, lineWidth: 2)
         )
-        .presentationBackground(.clear)
+        .presentationBackground(Color.clear)
+    }
+    
+    private var winText: some View {
+        Text("You Win!")
+            .foregroundColor(.white)
+            .font(fontOpenSansHebrew22)
+    }
+    
+    private var congratsText: some View {
+        Text("Congratulations!")
+            .foregroundColor(.white)
+            .font(fontOpenSansHebrew26)
+            .padding(.vertical, 12)
+    }
+    
+    private var playMoreButton: some View {
+        Button(action: {
+            showModal = false
+        }) {
+            Image("ic_play_more")
+        }
     }
 }
 

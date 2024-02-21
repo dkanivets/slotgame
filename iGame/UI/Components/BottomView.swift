@@ -13,31 +13,22 @@ struct BottomView: View {
     @Binding var win: Int
     var betStep: Int
     var action: () -> Void
+    
     private let fontInter = Font.custom("Inter-Bold", size: 11)
     private let fontKoh = Font.custom("KohSantepheap-Bold", size: 20)
+    private let opacity: CGFloat = 0.8
+    private let textOpacity: CGFloat = 0.3
+    
     var body: some View {
-        bottomView
-    }
-    private var bottomView: some View {
         HStack(alignment: .center, spacing: 16) {
             Spacer()
             coinsView
             betView
             winView
-            Button(action: {
-                bet = coins
-            }, label: {
-                Image("ic_max_bet")
-            })
-            Button(action: {
-                action()
-            }, label: {
-                Image("ic_spin")
-            })
-            .disabled(
-                coins < bet
-            )
-            .opacity(coins < bet ? 0.8 : 1)
+            maxBetButton
+            spinButton
+                .disabled(coins < bet)
+                .opacity(coins < bet ? opacity : 1)
             Spacer()
         }
         .background(
@@ -67,55 +58,78 @@ struct BottomView: View {
     }
     
     private var betView: some View {
-        Group {
-            Button(action: {
-                if bet > betStep {
-                    bet -= betStep
-                }
-            }, label: {
-                Image("ic_minus")
-            })
+        HStack {
+            minusButton
             VStack {
                 Text("bottomView.totalBet.title")
-                    .foregroundColor(.white.opacity(0.3))
+                    .foregroundColor(.white.opacity(textOpacity))
                     .font(fontInter)
                 Text("\(bet)")
                     .foregroundColor(.white)
                     .font(fontInter)
             }
-            .frame(minWidth: 130)
-            .frame(height: 41)
+            .frame(minWidth: 130, minHeight: 41)
             .background(
                 Image("ic_text_bg")
                     .resizable()
             )
-            Button(action: {
-                if bet + betStep <= coins {
-                    bet += betStep
-                }
-            }, label: {
-                Image("ic_plus")
-            })
+            plusButton
         }
     }
     
     private var winView: some View {
         VStack {
             Text("bottomView.win.title")
-                .foregroundColor(.white.opacity(0.3))
+                .foregroundColor(.white.opacity(textOpacity))
                 .font(fontInter)
             Text("\(win)")
                 .foregroundColor(.white)
                 .font(fontInter)
         }
-        .frame(minWidth: 194)
-        .frame(height: 41)
+        .frame(minWidth: 194, minHeight: 41)
         .background(
             Image("ic_text_bg")
                 .resizable()
         )
     }
+    
+    private var maxBetButton: some View {
+        Button(action: {
+            bet = coins
+        }) {
+            Image("ic_max_bet")
+        }
+    }
+    
+    private var spinButton: some View {
+        Button(action: {
+            action()
+        }) {
+            Image("ic_spin")
+        }
+    }
+    
+    private var minusButton: some View {
+        Button(action: {
+            if bet > betStep {
+                bet -= betStep
+            }
+        }) {
+            Image("ic_minus")
+        }
+    }
+    
+    private var plusButton: some View {
+        Button(action: {
+            if bet + betStep <= coins {
+                bet += betStep
+            }
+        }) {
+            Image("ic_plus")
+        }
+    }
 }
+
 
 #Preview {
     BottomView(coins: .constant(1000), 

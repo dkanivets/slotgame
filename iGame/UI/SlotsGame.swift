@@ -10,40 +10,38 @@ import SwiftUI
 struct SlotsGame: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var slots: [[String]] = []
-//    @State private var animated = false
-//    @State private var animation = 1.0
     @State private var coins: Int = 1000
     @State private var bet: Int = 50
     @State private var win: Int = 0
     @State private var showAlert = false
     private let baseSet = (1...7).map { "ic_slot_\($0)" }
-
+    
     var body: some View {
-            ZStack(alignment: .top) {
-                VStack(spacing: 0) {
-                    navigationButtons
-                    Spacer()
-                    BottomView(coins: $coins, bet: $bet, win: $win, betStep: 10, action: {
-                        spin()
-                    })
-                }
-                .background(
-                    Image("ic_slots_bg")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                )
-                .ignoresSafeArea(.all)
-                slotMachineView
-                    .ignoresSafeArea(.all)
+        ZStack(alignment: .top) {
+            VStack(spacing: 0) {
+                navigationButtons
+                Spacer()
+                BottomView(coins: $coins, bet: $bet, win: $win, betStep: 10, action: {
+                    spin()
+                })
             }
-            .navigationBarHidden(true)
-            .onAppear(perform: {
-                slots = (1...5).map { _ in baseSet.shuffled() }
-            })
+            .background(
+                Image("ic_slots_bg")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            )
+            .ignoresSafeArea(.all)
+            slotMachineView
+                .ignoresSafeArea(.all)
+        }
+        .navigationBarHidden(true)
+        .onAppear {
+            slots = (1...5).map { _ in baseSet.shuffled() }
+        }
         .ignoresSafeArea(.all)
-        .sheet(isPresented: $showAlert, content: {
+        .sheet(isPresented: $showAlert) {
             WinAlertView(showModal: $showAlert)
-        })
+        }
     }
     
     private var slotMachineView: some View {
@@ -58,8 +56,7 @@ struct SlotsGame: View {
                                     ForEach(slot, id: \.self) { item in
                                         Image(item)
                                             .resizable()
-                                            .frame(width: geometry.size.height / 5,
-                                                   height: geometry.size.height / 5)
+                                            .frame(width: geometry.size.height / 5, height: geometry.size.height / 5)
                                     }
                                 }
                             }
@@ -76,7 +73,6 @@ struct SlotsGame: View {
                 Image("ic_slots_frame")
                     .resizable()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
-                
             )
             .frame(maxWidth: .infinity)
         }
@@ -89,16 +85,14 @@ struct SlotsGame: View {
     private var navigationButtons: some View {
         HStack(spacing: 0) {
             Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }, label: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
                 Image("ic_back")
-            })
+            }
             Spacer()
-            NavigationLink(destination: {
-                SettingsView()
-            }, label: {
+            NavigationLink(destination: SettingsView()) {
                 Image("ic_settings")
-            })
+            }
         }
         .padding(32)
     }
@@ -123,26 +117,17 @@ struct SlotsGame: View {
     }
     
     private func spin() {
-        /// Spin via shuffle
-//        withAnimation(.linear) {
-//            coins -= bet
-//            slots = (1...5).map { _ in baseSet.shuffled() }
-//            let result = Set(slots.map{$0[1]}).count
-//            calculateWin(with: result)
-//        }
-        /// Spin via random shift
-        withAnimation(.interpolatingSpring, {
+        withAnimation(.interpolatingSpring) {
             coins -= bet
             for slot in slots.enumerated() {
                 slots[slot.offset] = slot.element.shift(withDistance: Int.random(in: 0...6) )
             }
-            let result = Set(slots.map{$0[1]}).count
+            let result = Set(slots.map { $0[1] }).count
             calculateWin(with: result)
-        }, completion: {
-            if win > bet {
-                showAlert = true
-            }
-        })
+        }
+        if win > bet {
+            showAlert = true
+        }
     }
 }
 

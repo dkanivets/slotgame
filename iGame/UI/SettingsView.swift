@@ -10,17 +10,19 @@ import SwiftUI
 struct SettingsView: View {
     @EnvironmentObject var audioManager: AudioManager
     @Environment(\.presentationMode) var presentationMode
+    
     @State private var soundOn: Bool = true
-    private var privacyURL = "https://www.lipsum.com/feed/html"
-    private var termsURL = "https://www.lipsum.com/feed/html"
+    private let privacyURL = "https://www.lipsum.com/feed/html"
+    private let termsURL = "https://www.lipsum.com/feed/html"
+    
     var body: some View {
         ZStack(alignment: .topLeading) {
             settingsButtons
             Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-            }, label: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
                 Image("ic_back")
-            })
+            }
             .padding(32)
         }
         .background(
@@ -28,32 +30,25 @@ struct SettingsView: View {
                 .resizable()
         )
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .ignoresSafeArea(.all)
+        .ignoresSafeArea()
         .navigationBarHidden(true)
-        .onAppear(perform: {
-            if audioManager != nil {
-                soundOn = audioManager.isPlaying
-            }
-        })
+        .onAppear {
+            soundOn = audioManager.isPlaying
+        }
     }
+    
     private var settingsButtons: some View {
         VStack(alignment: .center, spacing: 8) {
             Button(action: {
                 soundOn.toggle()
                 audioManager.isPlaying.toggle()
-            }, label: {
-                if soundOn {
-                    Image("ic_sound_on")
-                } else {
-                    Image("ic_sound_off")
-                }
-            })
-            Link(destination: URL(string: privacyURL)!,
-                 label: {
+            }) {
+                Image(soundOn ? "ic_sound_on" : "ic_sound_off")
+            }
+            Link(destination: URL(string: privacyURL)!, label: {
                 Image("ic_privacy")
             })
-            Link(destination: URL(string: termsURL)!,
-                 label: {
+            Link(destination: URL(string: termsURL)!, label: {
                 Image("ic_terms")
             })
             Button(action: {}, label: {
@@ -63,6 +58,7 @@ struct SettingsView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
+
 
 #Preview {
     SettingsView()
