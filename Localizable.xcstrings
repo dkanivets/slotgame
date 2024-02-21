@@ -24,6 +24,9 @@
         }
       }
     },
+    "Congratulations!" : {
+
+    },
     "selectGame.roulette.title" : {
       "localizations" : {
         "en" : {
@@ -43,6 +46,9 @@
           }
         }
       }
+    },
+    "You Win!" : {
+
     }
   },
   "version" : "1.0"

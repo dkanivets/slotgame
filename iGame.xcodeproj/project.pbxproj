@@ -46,6 +46,8 @@
 		C789C8872B85F56C002ABD89 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = C789C8862B85F56C002ABD89 /* Localizable.xcstrings */; };
 		C789C8892B85FD8D002ABD89 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C789C8882B85FD8D002ABD89 /* AudioManager.swift */; };
 		C789C88D2B860140002ABD89 /* theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C789C88C2B860140002ABD89 /* theme.mp3 */; };
+		C7CAAA262B869B0900353F15 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CAAA252B869B0900353F15 /* Extensions.swift */; };
+		C7CAAA282B86A2ED00353F15 /* WinAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CAAA272B86A2ED00353F15 /* WinAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		C789C8862B85F56C002ABD89 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		C789C8882B85FD8D002ABD89 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		C789C88C2B860140002ABD89 /* theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = theme.mp3; sourceTree = "<group>"; };
+		C7CAAA252B869B0900353F15 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		C7CAAA272B86A2ED00353F15 /* WinAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				C789C8832B852D34002ABD89 /* BottomView.swift */,
+				C7CAAA272B86A2ED00353F15 /* WinAlertView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				C789C8882B85FD8D002ABD89 /* AudioManager.swift */,
+				C7CAAA252B869B0900353F15 /* Extensions.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -317,9 +323,11 @@
 				C752159B2B8009DB0085FF21 /* SlotsGame.swift in Sources */,
 				C789C8892B85FD8D002ABD89 /* AudioManager.swift in Sources */,
 				C752159D2B800A4A0085FF21 /* SettingsView.swift in Sources */,
+				C7CAAA262B869B0900353F15 /* Extensions.swift in Sources */,
 				C75C240E2B7E96DE000A8123 /* SelectGameView.swift in Sources */,
 				C789C8842B852D34002ABD89 /* BottomView.swift in Sources */,
 				C75C240C2B7E96DE000A8123 /* iGameApp.swift in Sources */,
+				C7CAAA282B86A2ED00353F15 /* WinAlertView.swift in Sources */,
 				C752159F2B8149F90085FF21 /* RouletteGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

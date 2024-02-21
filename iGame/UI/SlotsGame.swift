@@ -10,11 +10,12 @@ import SwiftUI
 struct SlotsGame: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var slots: [[String]] = []
-    @State private var animated = false
-    @State private var animation = 1.0
+//    @State private var animated = false
+//    @State private var animation = 1.0
     @State private var coins: Int = 1000
     @State private var bet: Int = 50
     @State private var win: Int = 0
+    @State private var showAlert = false
     private let baseSet = (1...7).map { "ic_slot_\($0)" }
 
     var body: some View {
@@ -23,12 +24,7 @@ struct SlotsGame: View {
                     navigationButtons
                     Spacer()
                     BottomView(coins: $coins, bet: $bet, win: $win, betStep: 10, action: {
-                        withAnimation(.linear) {
-                            coins -= bet
-                            slots = (1...5).map { _ in baseSet.shuffled() }
-                            let result = Set(slots.map{$0[1]}).count
-                            calculateWin(with: result)
-                        }
+                        spin()
                     })
                 }
                 .background(
@@ -45,6 +41,9 @@ struct SlotsGame: View {
                 slots = (1...5).map { _ in baseSet.shuffled() }
             })
         .ignoresSafeArea(.all)
+        .sheet(isPresented: $showAlert, content: {
+            WinAlertView(showModal: $showAlert)
+        })
     }
     
     private var slotMachineView: some View {
@@ -53,17 +52,19 @@ struct SlotsGame: View {
                 Spacer()
                 HStack(alignment: .center, spacing: 16) {
                     ForEach(slots, id: \.self) { slot in
-                        ScrollView(.vertical, showsIndicators: false) {
-                            VStack(alignment: .center, spacing: 16) {
-                                ForEach(slot, id: \.self) { item in
-                                    Image(item)
-                                        .resizable()
-                                        .frame(width: geometry.size.height / 5,
-                                               height: geometry.size.height / 5)
+                        ScrollViewReader { scrollProxy in
+                            ScrollView(.vertical, showsIndicators: false) {
+                                VStack(alignment: .center, spacing: 16) {
+                                    ForEach(slot, id: \.self) { item in
+                                        Image(item)
+                                            .resizable()
+                                            .frame(width: geometry.size.height / 5,
+                                                   height: geometry.size.height / 5)
+                                    }
                                 }
                             }
+                            .frame(height: (geometry.size.height / 5 + 16) * 3)
                         }
-                        .frame(height: (geometry.size.height / 5 + 16) * 3)
                     }
                 }
                 .padding(.top, geometry.size.height / 6)
@@ -119,6 +120,29 @@ struct SlotsGame: View {
         }
         win = resultToCoins
         coins = coins + resultToCoins
+    }
+    
+    private func spin() {
+        /// Spin via shuffle
+//        withAnimation(.linear) {
+//            coins -= bet
+//            slots = (1...5).map { _ in baseSet.shuffled() }
+//            let result = Set(slots.map{$0[1]}).count
+//            calculateWin(with: result)
+//        }
+        /// Spin via random shift
+        withAnimation(.interpolatingSpring, {
+            coins -= bet
+            for slot in slots.enumerated() {
+                slots[slot.offset] = slot.element.shift(withDistance: Int.random(in: 0...6) )
+            }
+            let result = Set(slots.map{$0[1]}).count
+            calculateWin(with: result)
+        }, completion: {
+            if win > bet {
+                showAlert = true
+            }
+        })
     }
 }
 

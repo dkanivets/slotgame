@@ -14,6 +14,7 @@ struct RouletteGame: View {
     @State private var bet: Int = 2000
     @State private var win: Int = 0
     @State private var angle: Angle = Angle(degrees: 0)
+    @State private var showAlert = false
     private var results = [10000, 1000, 100, 3000, 0, 5000, 8000, 7000, 10000, 9000, 100, 7000, 0, 6000, 4000, 2000]
     
     var body: some View {
@@ -23,11 +24,15 @@ struct RouletteGame: View {
                 Spacer()
                 BottomView(coins: $coins, bet: $bet, win: $win, betStep: 50, action: {
                     angle = Angle(degrees: 0)
-                    withAnimation(.linear(duration: 2)) {
+                    withAnimation(.linear(duration: 2), {
                         angle = Angle(degrees: Double.random(in: 0...720))
                         coins -= bet
                         calculateWin()
-                    }
+                    }, completion: {
+                        if win > bet {
+                            showAlert = true
+                        }
+                    })
                 })
             }
             .background(
@@ -39,6 +44,9 @@ struct RouletteGame: View {
             rouletteView
         }
         .navigationBarHidden(true)
+        .sheet(isPresented: $showAlert, content: {
+            WinAlertView(showModal: $showAlert)
+        })
     }
     
     private var rouletteView: some View {
