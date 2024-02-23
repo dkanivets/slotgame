@@ -21,9 +21,7 @@ struct SlotsGame: View {
             VStack(spacing: 0) {
                 navigationButtons
                 Spacer()
-                BottomView(coins: $coins, bet: $bet, win: $win, betStep: 10, action: {
-                    spin()
-                })
+                BottomView(coins: $coins, bet: $bet, win: $win, betStep: 10, action: spin)
             }
             .background(
                 Image("ic_slots_bg")
@@ -31,6 +29,7 @@ struct SlotsGame: View {
                     .aspectRatio(contentMode: .fill)
             )
             .ignoresSafeArea(.all)
+            
             slotMachineView
                 .ignoresSafeArea(.all)
         }
@@ -48,24 +47,9 @@ struct SlotsGame: View {
         GeometryReader { geometry in
             VStack(alignment: .center, spacing: 0) {
                 Spacer()
-                HStack(alignment: .center, spacing: 16) {
-                    ForEach(slots, id: \.self) { slot in
-                        ScrollViewReader { scrollProxy in
-                            ScrollView(.vertical, showsIndicators: false) {
-                                VStack(alignment: .center, spacing: 16) {
-                                    ForEach(slot, id: \.self) { item in
-                                        Image(item)
-                                            .resizable()
-                                            .frame(width: geometry.size.height / 5, height: geometry.size.height / 5)
-                                    }
-                                }
-                            }
-                            .frame(height: (geometry.size.height / 5 + 16) * 3)
-                        }
-                    }
-                }
-                .padding(.top, geometry.size.height / 6)
-                .clipped()
+                slotRows(geometry: geometry)
+                    .padding(.top, geometry.size.height / 6)
+                    .clipped()
                 Spacer()
             }
             .frame(maxWidth: .infinity)
@@ -81,7 +65,30 @@ struct SlotsGame: View {
         .padding(.bottom, 66)
         .clipped()
     }
-    
+
+    private func slotRows(geometry: GeometryProxy) -> some View {
+        HStack(alignment: .center, spacing: 16) {
+            ForEach(slots, id: \.self) { slot in
+                ScrollViewReader { scrollProxy in
+                    ScrollView(.vertical, showsIndicators: false) {
+                        slotColumns(slot: slot, geometry: geometry)
+                    }
+                    .frame(height: (geometry.size.height / 5 + 16) * 3)
+                }
+            }
+        }
+    }
+
+    private func slotColumns(slot: [String], geometry: GeometryProxy) -> some View {
+        VStack(alignment: .center, spacing: 16) {
+            ForEach(slot, id: \.self) { item in
+                Image(item)
+                    .resizable()
+                    .frame(width: geometry.size.height / 5, height: geometry.size.height / 5)
+            }
+        }
+    }
+
     private var navigationButtons: some View {
         HStack(spacing: 0) {
             Button(action: {
@@ -98,36 +105,36 @@ struct SlotsGame: View {
     }
     
     private func calculateWin(with result: Int) {
-        var resultToCoins: Int {
-            switch result {
-            case 1:
-                return bet * 10
-            case 2:
-                return bet * 5
-            case 3:
-                return bet * 2
-            case 4:
-                return bet / 2
-            default:
-                return 0
-            }
+        let multiplier: Int
+        
+        switch result {
+        case 1:
+            multiplier = 10
+        case 2:
+            multiplier = 5
+        case 3:
+            multiplier = 2
+        case 4:
+            multiplier = 1
+        default:
+            multiplier = 0
         }
+        
+        let resultToCoins = bet * multiplier
         win = resultToCoins
-        coins = coins + resultToCoins
+        coins += resultToCoins
     }
     
     private func spin() {
         withAnimation(.interpolatingSpring) {
             coins -= bet
-            for slot in slots.enumerated() {
-                slots[slot.offset] = slot.element.shift(withDistance: Int.random(in: 0...6) )
+            slots.indices.forEach { index in
+                slots[index] = slots[index].shift(withDistance: Int.random(in: 0...6))
             }
             let result = Set(slots.map { $0[1] }).count
             calculateWin(with: result)
         }
-        if win > bet {
-            showAlert = true
-        }
+        showAlert = win > bet
     }
 }
 
